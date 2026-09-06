@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: "https://smart-market-watchlist-mm8a.onrender.com",
 });
 
 
@@ -48,12 +48,7 @@ export const signup = async (
 
     return response.data;
 
-    localStorage.setItem(
-      "access_token",
-      response.data.access_token
-    );
-
-    return response.data;
+    
   } catch (error: unknown) {
     if (axios.isAxiosError(error)) {
       console.error(
